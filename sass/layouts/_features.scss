@@ -52,5 +52,13 @@
 }
 
 .feature-list__icon {
-    margin: 25px 100px;
+    @media screen and (max-width: 767px) {
+            margin: 25px 190px;
+        }
+    @media screen and (min-width: 768px) {
+            margin: 25px 142px;
+        }    
+     @media screen and (min-width: 1200px) {
+            margin: 25px 100px;
+         }    
 }

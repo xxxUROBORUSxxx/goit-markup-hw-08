@@ -1,9 +1,9 @@
 .container {
     width: 100%;
-    min-width: 320px;
-    padding: 0 15px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
     @media screen and (min-width: 480px) {
             width: 480px;
@@ -17,3 +17,12 @@
         width: 1200px;
     } 
 }
+
+// .page-header .container-menu {
+//     @media screen and (max-width: 767px) {
+//     min-height: 80px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: flex-end;
+//     }
+// }
