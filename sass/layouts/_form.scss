@@ -109,7 +109,7 @@
     align-items: center;
     font-size: 11px;
     line-height: 1.14;
-    color: var(--secondary-text-color);
+    color: var(--title-text-collor);
     @media screen and (max-width: 479px) {
         font-size: 10px;
         line-height: 1.11;
@@ -134,23 +134,9 @@
 }
 
 .policy-input:checked + .policy-text-main span {
-    background-color: var(--accent-color);
+    background-color: var(--akcent-color);
     border-color: transparent;
-    fill: var(--white-background-color);
-}
-
-.checkbox-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    /* identical to box height, or 171% */
-    letter-spacing: 0.03em;
-    color: var(--title-text-collor);
+    fill: var(--primary-white-colo);
 }
 
 .form-comment {
@@ -162,47 +148,3 @@
     border-radius: 4px;
     outline: transparent;
 }
-
-// .checkbox {
-//     visibility: hidden;
-//     width: 1px;
-//     height: 1px;
-//     margin: -1px;
-//     &:focus {
-//             border-color: var(--akcent-color);
-//         }
-// }
-
-// .check {
-//     padding-left: 10px;
-// }
-
-// .icon-checkbox {
-//     width: 16px;
-//     height: 15px;
-//     margin-right: 8px;
-//     overflow: hidden;
-//     border-radius: 0.05em;
-//     background-repeat: no-repeat;
-//     background-position: 50% 50%;
-//     box-shadow: 0 0 0 0.1em var(--primary-text-color);
-//     .checkbox:focus+& {
-//             box-shadow: 0 0 0 0.1em var(--akcent-color);
-//             background-position: 100%;
-//         }
-//     .checkbox:checked+& {
-//             box-shadow: 0 0 0 0.1em var(--akcent-color);
-//             background-image: url('../img/icon-check.svg');
-//             background-position: 100%;
-//         }
-// }
-
-// .checkbox-label {
-//     display: flex;
-//     cursor: pointer;
-//     justify-content: center;
-//     align-items: center;
-//     align-content: center;
-//     margin-bottom: 26px;
-//     margin-top: 20px;
-// }
