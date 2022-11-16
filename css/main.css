@@ -167,14 +167,9 @@ h6 {
 
 .inner {
   background-color: var(--section-color);
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media screen and (min-width: 1200px) {
-  .inner {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+  margin: 0 auto;
+  padding-bottom: 94px;
+  padding-top: 94px;
 }
 
 .section-title {
@@ -185,7 +180,7 @@ h6 {
   color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.16;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 }
 
@@ -225,6 +220,7 @@ h6 {
 }
 
 .mob-menu {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -236,6 +232,7 @@ h6 {
 }
 
 .mob-menu > .menu-container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -441,6 +438,10 @@ h6 {
   color: var(--akcent-color);
 }
 
+.site-nav__item + .site-nav__item {
+  margin-left: 50px;
+}
+
 .site-nav__link--current::after {
   content: "";
   position: absolute;
@@ -468,17 +469,13 @@ h6 {
 @media screen and (min-width: 768px) {
   .auth-nav {
     display: flex;
-    margin-left: auto;
     flex-direction: column;
     align-content: center;
-    margin-top: 21px;
-    margin-bottom: 21px;
   }
 }
 @media screen and (min-width: 1200px) {
   .auth-nav {
     display: flex;
-    margin-left: auto;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -500,16 +497,12 @@ h6 {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav__link:hover, .auth-nav__link:focus {
   color: var(--akcent-color);
-}
-@media screen and (min-width: 768px) {
-  .auth-nav__link {
-    margin-top: 10px;
-    align-items: center;
-  }
 }
 
 .conect-icon {
@@ -818,7 +811,7 @@ h6 {
   align-items: center;
   font-size: 11px;
   line-height: 1.14;
-  color: var(--title-text-collor);
+  color: var(--secondary-text-color);
 }
 @media screen and (max-width: 479px) {
   .policy-text-main {
@@ -847,9 +840,23 @@ h6 {
 }
 
 .policy-input:checked + .policy-text-main span {
-  background-color: var(--akcent-color);
+  background-color: var(--accent-color);
   border-color: transparent;
-  fill: var(--primary-white-colo);
+  fill: var(--white-background-color);
+}
+
+.checkbox-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  letter-spacing: 0.03em;
+  color: var(--title-text-collor);
 }
 
 .form-comment {
@@ -886,7 +893,6 @@ h6 {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
 }
 
@@ -903,21 +909,14 @@ h6 {
     flex-basis: calc((100% - 90px) / 4);
   }
 }
-.section-feature {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-@media screen and (max-width: 479px) {
-  .section-feature {
-    padding-left: 15px;
-    padding-right: 15px;
+@media screen and (max-width: 767px) {
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .section-feature {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
+
+.caption {
+  padding-top: 94px;
 }
 
 .feature-list__title {
@@ -927,12 +926,6 @@ h6 {
   font-size: 14px;
   line-height: 1.17;
   text-transform: uppercase;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .feature-list__title {
-    text-align: left;
-  }
 }
 
 .feature-list__text {
@@ -1056,20 +1049,6 @@ h6 {
 @media screen and (max-width: 767px) {
   .work-list__item:not(:last-child) {
     margin-bottom: 30px;
-  }
-}
-
-.team__title {
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 1.17;
-  text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .team__title {
-    margin-bottom: 50px;
-    font-size: 36px;
   }
 }
 
@@ -1375,7 +1354,6 @@ h6 {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
-  font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address__link:hover, .address__link:focus {
@@ -1389,7 +1367,6 @@ h6 {
   letter-spacing: 0.03em;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
 }
 
 .address__item:not(:last-child) {
